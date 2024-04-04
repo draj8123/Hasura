@@ -1,0 +1,7 @@
+1. Declaration of query variable, overseen it and refer the doc and found out it is just in the bottom :)
+
+2. Execute query as an artist, initially not sure how to accomplish this, but referred the Hasuradoc to 
+   create x-hasura-role and x-hasura-user-id from permission section of the table by using custom check
+   i.e allow role artist to select rows if artist_id = x-hasura-user-id, and passed these two as headers via accomplish
+
+   

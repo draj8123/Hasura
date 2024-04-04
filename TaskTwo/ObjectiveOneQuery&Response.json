@@ -1,0 +1,104 @@
+
+
+
+query getTracks($genre: String, $limit: Int, $offset: Int) {
+    track(limit: $limit, offset: $offset, where: {genre: {name: {_eq: $genre}}}) {
+      name
+      track_id
+    }
+  }
+  
+  //Variables 
+  
+  {
+  "genre":"Metal",
+  "limit": 5,
+  "offset":50
+  }
+  
+  //Response
+  
+  {
+    "data": {
+      "track": [
+        {
+          "name": "Trupets Of Jericho",
+          "track_id": 190
+        },
+        {
+          "name": "Machine Men",
+          "track_id": 191
+        },
+        {
+          "name": "The Alchemist",
+          "track_id": 192
+        },
+        {
+          "name": "Realword",
+          "track_id": 193
+        },
+        {
+          "name": "Free Speech For The Dumb",
+          "track_id": 408
+        }
+      ]
+    }
+  }
+  //////////////////
+  
+  Headers :
+  ENABLE	KEY	               VALUE
+          x-hasura-role       artist
+          x-hasura-user-id     1
+  
+  # Execute as an Artist
+  query getAlbumsAsArtist{
+  album {
+  title
+  }
+  }
+  
+  //Response
+  
+  {
+    "data": {
+      "album": [
+        {
+          "title": "For Those About To Rock We Salute You"
+        },
+        {
+          "title": "Let There Be Rock"
+        }
+      ]
+    }
+  }
+  
+  //////////////
+  
+  query trackValue {
+    track_aggregate {
+      aggregate {
+        sum {
+          unit_price
+        }
+      }
+    }
+  }
+  
+  // Response
+  
+  Error : cannot query field "track_aggregate" on type "query_root"
+  
+  {
+    "data": {
+      "track_aggregate": {
+        "aggregate": {
+          "sum": {
+            "unit_price": 3680.97
+          }
+        }
+      }
+    }
+  }
+  
+  

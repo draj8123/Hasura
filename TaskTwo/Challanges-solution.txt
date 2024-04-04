@@ -1,1 +1,6 @@
-test
+
+1. I was not able to set proper permission to the user Artist, however I gone through the Hasura doc to 
+   set the permission on the table to set a custom permission and to use Headers.
+2. Changed the host port, and created new docker project(docker-compose -p update-Hasura up -d) since it was using 
+   the same ports of TaskOne.
+     
