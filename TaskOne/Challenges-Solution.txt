@@ -1,0 +1,11 @@
+Challanges:
+
+a. I have already some application running on the port 8080, hence I got to use some other port : 8089
+   by editing the compose file.
+b. Found error while executing the Chinook_PostgreSql.sql file, remove /c chinook, which is specific 
+   to plsql
+
+c. The Query(GraphiQL) which is specific to Hasura, it took time for me to understand.
+    I also referred to the Udemy course which helped me to construct the GraphiQL queries
+    
+    UdemyCourse : Performant GraphQL Backend in 1 Day Using Hasura Engine 2022 by : Dmytro

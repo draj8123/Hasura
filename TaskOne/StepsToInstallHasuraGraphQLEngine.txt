@@ -1,0 +1,9 @@
+Steps to install and Configure Hasura GraphQL Engine:
+  a. Insalled docker 
+  b. Naviagted to hasura docs, and downloaded docker-compose file.
+     docker compose file from the official website :  
+      curl https://raw.githubusercontent.com/hasura/graphql-engine/stable/install-manifests/docker-compose/docker-compose.yaml -o docker-compose.yml
+  c. Start Docker containers: Run docker-compose up -d, which started hasura engine and postgreSQL DB.
+  d. Access Hasura UI console : http://localhost:8080
+  f. Created chinook DB uisng the Chinook_PostgreSql.sql (https://github.com/lerocha/chinook-database/releases)
+  g. Tested GraphQL queries and mutation on the UI
